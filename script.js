@@ -6,9 +6,17 @@ var score= 0;
 
 
 function startScreen(){
-		background(96, 157, 255)
+		background(187, 153, 255)
 		fill(255)
 		textAlign(CENTER);
 		text('WELCOME to flöppy birb', width / 2, height / 2)
 		text('click to start', width / 2, height / 2 + 20);
+} 
+
+function endScreen(){
+		background(255, 0, 0)
+		fill(255)
+		textAlign(CENTER);
+		text('GAME OVER', width / 2, height / 2)
+		text('click to start again', width / 2, height / 2 + 20);
 } 

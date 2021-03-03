@@ -2,7 +2,7 @@ var bird;
 var pipes = [];
 
 function setup() {
-  createCanvas(1200, 1200);
+  createCanvas(window.innerWidth, window.innerHeight);
   bird = new bird();
   pipes.push(new Pipe());
 }
@@ -13,12 +13,13 @@ function draw() {
   } else if (screen == 1) {
     game()
   } else if (screen == 2) {
-    endScreen()
+    endScreen();
+    pipes = [];    
   }
 }
 
 function game() {
-  background(0);
+  background(51, 153, 255);
 
   for (var i = pipes.length - 1; i >= 0; i--) {
     pipes[i].show();
