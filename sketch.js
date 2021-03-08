@@ -14,19 +14,23 @@ function draw() {
     game()
   } else if (screen == 2) {
     endScreen();
-    pipes = [];    
+    pipes = []; 
+  function reset(){
+	  score=0;
+  	
+}
+   
   }
 }
 
 function game() {
   background(51, 153, 255);
-
+  text("score = " + score, 30,20)
   for (var i = pipes.length - 1; i >= 0; i--) {
     pipes[i].show();
     pipes[i].update();
 
     if (pipes[i].hits(bird)) {
-      console.log("HIT");
       screen = 2;
     }
 
@@ -40,6 +44,7 @@ function game() {
 
   if (frameCount % 75 == 0) {
     pipes.push(new Pipe());
+    score+= 1
   }
 }
 
@@ -86,7 +91,16 @@ function bird() {
       this.velocity = 0;
     }
 
+    
+
+
   }
 
+}
+
+function reset(){
+	  score=0;
+  	speed=2;
+  	y=-20;
 }
 

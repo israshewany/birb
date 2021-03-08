@@ -14,9 +14,11 @@ function startScreen(){
 } 
 
 function endScreen(){
-		background(255, 0, 0)
-		fill(255)
-		textAlign(CENTER);
-		text('GAME OVER', width / 2, height / 2)
-		text('click to start again', width / 2, height / 2 + 20);
+	background(255, 0, 0)
+	fill(255)
+	text('GAME OVER', width / 2, height / 2);
+  textAlign()
+	text('click to start again', width / 2, height / 2 + 20);
+  text("SCORE = " + score, width / 2, height / 2 + 40);
+
 } 
