@@ -88,10 +88,6 @@ function bird() {
       this.y = 0;
       this.velocity = 0;
     }
-
-    
-
-
   }
 
 function reset(){
