@@ -25,8 +25,8 @@ function Bird() {
       this.velocity = 0;
     }
 
-    if (this.y < 0) {
-      this.y = 0;
+    if (this.y < 32) {
+      this.y = 32;
       this.velocity = 0;
     }
 

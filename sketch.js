@@ -1,25 +1,22 @@
 var bird;
 var pipes = [];
+var score = 0;
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   bird = new bird();
-  pipes.push(new Pipe());
+  pipes.push(new Pipe()); 
 }
 
 function draw() {
   if (screen == 0) {
-    startScreen()
+    score = 0;
+    startScreen() 
   } else if (screen == 1) {
     game()
   } else if (screen == 2) {
     endScreen();
-    pipes = []; 
-  function reset(){
-	  score=0;
-  	
-}
-   
+    pipes = [];    
   }
 }
 
@@ -56,7 +53,8 @@ function keyPressed() {
 }
 
 function mouseClicked() {
-  screen = 1; 
+ screen = 1;
+ score = 0;
 }
 
 function bird() {
@@ -96,11 +94,9 @@ function bird() {
 
   }
 
-}
-
 function reset(){
 	  score=0;
   	speed=2;
   	y=-20;
 }
-
+}                       
