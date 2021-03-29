@@ -6,6 +6,7 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   bird = new bird();
   pipes.push(new Pipe()); 
+  song = loadSound('https://stafabandmp3.top/play/CvxK5pgQSIc')
 }
 
 function draw() {
