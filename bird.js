@@ -1,4 +1,7 @@
+let img; 
+
 function Bird() {
+  img = loadImage;('https://i1.sndcdn.com/avatars-000297971625-hku9dk-t500x500.jpg')
   this.y = height/2;
   this.x = 64;
 

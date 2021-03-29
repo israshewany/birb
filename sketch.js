@@ -1,12 +1,19 @@
 var bird;
 var pipes = [];
 var score = 0;
+var mySound;
+
+function preload() {
+  mySound = loadSound('harry.mp3');
+  //img = loadImage('https://i1.sndcdn.com/avatars-000297971625-hku9dk-t500x500.jpg');
+}
+
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   bird = new bird();
-  pipes.push(new Pipe()); 
-  song = loadSound('https://stafabandmp3.top/play/CvxK5pgQSIc')
+  pipes.push(new Pipe());   
+  mySound.play();
 }
 
 function draw() {
@@ -22,6 +29,7 @@ function draw() {
 }
 
 function game() {
+
   background(51, 153, 255);
   text("score = " + score, 30,20)
   for (var i = pipes.length - 1; i >= 0; i--) {
@@ -47,6 +55,7 @@ function game() {
 }
 
 function keyPressed() {
+   mySound.play();
   if (key == ' ') {
     bird.up();
     //console.log("SPACE");
