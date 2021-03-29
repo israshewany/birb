@@ -23,12 +23,12 @@ function endScreen(){
   textAlign()
 	text('click to start again', width / 2, height / 2 + 20);
   text("SCORE =  " + score, width / 2, height / 2 + 40); 
-  
+ 
   let highscore = localStorage.getItem('highscore');
 
   if (score > highscore)
      localStorage.setItem('highscore', score);
- 
-   
+ text('Highscore: ' + highscore, width / 2, height / 2 + 60 ); 
+
 } 
 
